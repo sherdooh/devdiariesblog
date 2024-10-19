@@ -1,11 +1,13 @@
-'use client'; // Mark this component as a Client Component
+'use client';
+import React, { useState } from 'react';
+import BlogItem from './BlogItem';
+import { blog_data } from '@/Assets/assets';
 
+const BlogList = () => {
+  const [menu, setMenu] = useState("All");
 
   return (
-    <div className='px-6 lg:px-16 xl:px-24'
-    style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2020/02/01/06/11/web-4809584_960_720.jpg')" }}>
-      
-      {/* Blog Filter Buttons */}
+    <div>
       <div className='flex justify-center gap-4 my-10'>
         <button
           onClick={() => setMenu('All')}
@@ -13,61 +15,48 @@
         >
           All
         </button>
-        
         <button
           onClick={() => setMenu('Programming')}
-          className={`${menu === 'Technology' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
+          className={`${menu === 'Programming' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
         >
           Programming
         </button>
-        
         <button
           onClick={() => setMenu('Cloud')}
-          className={`${menu === 'Startup' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
+          className={`${menu === 'Cloud' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
         >
-          Cloud&Devops
+          Cloud & DevOps
         </button>
-        
         <button
           onClick={() => setMenu('AI')}
-          className={`${menu === 'Lifestyle' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
+          className={`${menu === 'AI' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
         >
-          AI&ML
+          AI & ML
         </button>
         <button
           onClick={() => setMenu('Cybersecurity')}
-          className={`${menu === 'Technology' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
+          className={`${menu === 'Cybersecurity' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
         >
           Cybersecurity
         </button>
-        
         <button
           onClick={() => setMenu('Data')}
-          className={`${menu === 'Startup' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
+          className={`${menu === 'Data' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
         >
           Data Science
         </button>
-        
         <button
           onClick={() => setMenu('Blockchain')}
-          className={`${menu === 'Lifestyle' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
+          className={`${menu === 'Blockchain' ? 'bg-[#33254f] text-white' : 'bg-gray-200 text-black'} py-2 px-6 rounded-md font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300`}
         >
           Blockchain
         </button>
       </div>
-
       {/* Blog Items */}
-      <div className='flex flex-wrap justify-center gap-10 mb-16'>
-        {filteredBlogs.map((item, index) => (
-          <BlogItem
-            key={index}
-            id={item._id}
-            image={item.image}
-            title={item.title}
-            description={item.description}
-            category={item.category}
-          />
-        ))}
+      <div className='flex flex-wrap justify-around gap-1 gap-y-10 mb-16 xl:mx-24'>
+        {blog_data.filter((item)=> menu==="All"?true : item.category===menu) .map((item, key) => {
+          return <BlogItem key={key} id={item.id} image={item.image} title={item.title} description={item.description} category={item.category} />
+        })}
       </div>
     </div>
   );

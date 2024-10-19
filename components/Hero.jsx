@@ -2,47 +2,18 @@
 
 import React, { useState } from 'react';
 import Header from './Header';
-import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const Hero = () => {
 
-  const [email, setEmail] = useState("");
-
-  const onSubmitHandler = async (e) => {
-    e.preventDefault();
-
-    // Basic email validation
-    if (!email || !/\S+@\S+\.\S+/.test(email)) {
-      toast.error("Please enter a valid email address.");
-      return;
-    }
-
-    try {
-      const formData = new FormData();
-      formData.append("email", email);
-      const response = await axios.post('/api/email', formData);
-      
-      if (response.data.success) {
-        toast.success(response.data.msg || "Email submitted successfully!");
-        setEmail(""); // Clear the form input after successful submission
-      } else {
-        toast.error("Something went wrong");
-      }
-    } catch (error) {
-      toast.error("Error submitting form");
-    }
-  }
+ 
 
   return (
-    <div className='text-center h-[70vh] bg-cover bg-center'
-      style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2020/02/01/06/11/web-4809584_960_720.jpg')" }}>
+    <div className='text-center h-[70vh] bg-cover bg-center'>
 
       <Header />
 
-      {/* Toast Notification Container */}
-      <ToastContainer />
+    
 
       {/* Main Heading */}
       <h1 className='text-4xl sm:text-6xl font-extrabold text-[#33254f]'>
@@ -55,13 +26,12 @@ const Hero = () => {
       </p>
 
       {/* Subscribe Form */}
-      <form onSubmit={onSubmitHandler} className='flex items-center justify-between max-w-[500px] mx-auto mt-10 p-2 bg-white border border-black rounded-lg shadow-md
+      <form  className='flex items-center justify-between max-w-[500px] mx-auto mt-10 p-2 bg-white border border-black rounded-lg shadow-md
         hover:shadow-lg transition-all duration-300'>
 
 
         <input 
-          onChange={(e) => setEmail(e.target.value)} 
-          value={email} 
+          
           type='email' 
           placeholder='Enter your email'
           aria-label='Email Address'
