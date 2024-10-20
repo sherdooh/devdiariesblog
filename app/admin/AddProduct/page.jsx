@@ -12,6 +12,7 @@ const Page = () => {
   const [data, setData] = useState({
     title: "",
     description: "",
+    category:"Programming",
     author:"Shadrack Kip",
     authorImg: "/author_img.png"
   });
@@ -90,7 +91,7 @@ const Page = () => {
           type="text"
           className="w-full sm:w-[500px] px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-300 focus:border-yellow-400 outline-none transition"
           placeholder="Type here"
-          maxLength={20}
+          maxLength={100}
           required
         />
       </div>
@@ -106,7 +107,7 @@ const Page = () => {
           value={data.description}
           className="w-full sm:w-[500px] px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-300 focus:border-yellow-400 outline-none transition"
           placeholder="Write content here..."
-          maxLength={120}
+          maxLength={200}
           rows={8}
           required
         />
