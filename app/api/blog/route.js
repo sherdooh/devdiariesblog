@@ -18,11 +18,17 @@ LoadDB();
 
 
 export async function GET(request) {
+    await ConnectDB();
+    try {
+        
+        const blogs = await BlogModel.find();
 
-    
-    return NextResponse.json({msg:"API OK"})
-} 
-
+        return NextResponse.json({ success: true, data: blogs });
+    } catch (error) {
+        console.error("Error fetching blogs:", error);
+        return NextResponse.json({ success: false, msg: "Failed to fetch blogs" });
+    }
+}
 
 export async function POST(request) {
 
