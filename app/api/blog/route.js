@@ -18,16 +18,9 @@ LoadDB();
 
 
 export async function GET(request) {
-    await ConnectDB();
-    try {
-        
         const blogs = await BlogModel.find();
+        return NextResponse.json({ blogs });
 
-        return NextResponse.json({ success: true, data: blogs });
-    } catch (error) {
-        console.error("Error fetching blogs:", error);
-        return NextResponse.json({ success: false, msg: "Failed to fetch blogs" });
-    }
 }
 
 export async function POST(request) {
