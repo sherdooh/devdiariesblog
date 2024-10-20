@@ -6,14 +6,14 @@ import Header from './Header';
 
 const Hero = () => {
 
- 
+
 
   return (
     <div className='text-center h-[70vh] bg-cover bg-center'>
 
       <Header />
 
-    
+
 
       {/* Main Heading */}
       <h1 className='text-4xl sm:text-6xl font-extrabold text-[#33254f]'>
@@ -26,13 +26,13 @@ const Hero = () => {
       </p>
 
       {/* Subscribe Form */}
-      <form  className='flex items-center justify-between max-w-[500px] mx-auto mt-10 p-2 bg-white border border-black rounded-lg shadow-md
+      <form className='flex items-center justify-between max-w-[500px] mx-auto mt-10 p-2 bg-white border border-black rounded-lg shadow-md
         hover:shadow-lg transition-all duration-300'>
 
 
-        <input 
-          
-          type='email' 
+        <input
+
+          type='email'
           placeholder='Enter your email'
           aria-label='Email Address'
           className='flex-grow py-4 px-4 text-gray-700 rounded-l-lg outline-none text-sm sm:text-base 
