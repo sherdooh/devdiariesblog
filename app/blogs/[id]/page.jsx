@@ -35,7 +35,15 @@ const Page = ({ params }) => {
       </div>
 
       <div className='mx-5 max-w-[800px] md:mx-auto mt-[-100px] mb-10'>
+        {/* <Image className='border-4 border-white' src={data.image.startsWith('/') ? data.image : `/${data.image}`} width={1280} height={720} alt='' />
+
+        <Image className='border-4 border-white' src={data.image.startsWith('/') ? `.${data.image}` : `/${data.image}`} width={1280} height={720} alt='' /> */}
         <Image className='border-4 border-white' src={`/${data.image}`} width={1280} height={720} alt='' />
+
+
+
+
+      
         
         <h1 className="my-8 text-[26px] font-semibold">Introduction</h1>
         <p>{data.description}</p>

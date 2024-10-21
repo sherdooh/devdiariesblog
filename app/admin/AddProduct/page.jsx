@@ -1,5 +1,4 @@
 'use client';
-
 import { assets } from '@/Assets/assets';
 import axios from 'axios';
 import Image from 'next/image';
@@ -7,8 +6,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
 const Page = () => {
-  const [image, setImage] = useState(false);
-
+  const [image, setImage] = useState(null); // Initialize as null
   const [data, setData] = useState({
     title: "",
     description: "",
@@ -17,39 +15,30 @@ const Page = () => {
     authorImg: "/author_img.png"
   });
 
-
   const onChangeHandler = (event) => {
-
     const name = event.target.name;
     const value = event.target.value;
-    setData(data=>({...data,[name]:value}));
+    setData(data => ({ ...data, [name]: value }));
     console.log(data);
   }
-
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('title',data.title);
-    formData.append('description',data.description);
-    formData.append('category',data.category);
-    formData.append('author',data.author);
-    formData.append('authorImg',data.authorImg);
-    formData.append('image',image);
+    formData.append('title', data.title);
+    formData.append('description', data.description);
+    formData.append('category', data.category);
+    formData.append('author', data.author);
+    formData.append('authorImg', data.authorImg);
+    formData.append('image', image);
 
-    const response = await axios.post('/api/blog',formData)
-
+    const response = await axios.post('/api/blog', formData);
     if (response.data.success) {
-      toast.success(response.data.msg)
-      
+      toast.success('Blog posted successfully!');
     } else {
-      toast.error('Error')
-
+      toast.error('Error posting blog');
     }
-
-
   }
-
 
   return (
     <form onSubmit={onSubmitHandler} className="pt-10 px-6 sm:pt-12 sm:px-16 bg-white max-w-2xl mx-auto rounded-lg shadow-md border border-gray-200">
@@ -60,8 +49,8 @@ const Page = () => {
         </label>
         <div className="flex items-center justify-center p-4 bg-gray-100 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-200 transition">
           <label htmlFor="image" className="flex flex-col items-center cursor-pointer">
-            <Image 
-              src={image ? URL.createObjectURL(image) : assets.upload_area} 
+            <Image
+              src={image ? URL.createObjectURL(image) : assets.upload_area}
               width={140}
               height={70}
               priority
@@ -69,16 +58,15 @@ const Page = () => {
               className="mt-2"
             />
           </label>
-          <input 
-            type="file" 
-            id="image" 
+          <input
+            type="file"
+            id="image"
             onChange={(e) => setImage(e.target.files?.[0] || null)}
-            hidden 
+            hidden
             required
           />
         </div>
       </div>
-
       {/* Blog Title */}
       <div className="mb-6">
         <label htmlFor="title" className="block text-xl font-semibold mb-2">
@@ -95,13 +83,12 @@ const Page = () => {
           required
         />
       </div>
-
       {/* Blog Description */}
       <div className="mb-6">
         <label htmlFor="description" className="block text-xl font-semibold mb-2">
           Blog Description
         </label>
-        <textarea 
+        <textarea
           name="description"
           onChange={onChangeHandler}
           value={data.description}
@@ -112,7 +99,6 @@ const Page = () => {
           required
         />
       </div>
-
       {/* Blog Category */}
       <div className="mb-6">
         <label htmlFor="category" className="block text-xl font-semibold mb-2">
@@ -133,7 +119,6 @@ const Page = () => {
           <option value="Cloud">Cloud & DevOps</option>
         </select>
       </div>
-
       {/* Submit Button */}
       <button
         type="submit"
