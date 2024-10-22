@@ -6,6 +6,24 @@ import Header from './Header';
 
 const Hero = () => {
 
+  const [email,setEmail] = useState("");
+
+
+  const onSubmitHandler = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("email", email);
+    const response = await axios.post('/api/email',formData)
+
+    if (response.data.success) {
+      toast.success(response.data.msg)
+      setEmail("");
+      
+    }else {
+      toast.error("Error");
+    }
+  }
+
 
 
   return (
@@ -26,12 +44,14 @@ const Hero = () => {
       </p>
 
       {/* Subscribe Form */}
-      <form className='flex items-center justify-between max-w-[500px] mx-auto mt-10 p-2 bg-white border border-black rounded-lg shadow-md
+      <form onSubmit={onSubmitHandler} className='flex items-center justify-between max-w-[500px] mx-auto mt-10 p-2 bg-white border border-black rounded-lg shadow-md
         hover:shadow-lg transition-all duration-300'>
 
 
         <input
 
+          onChange={(e) => setEmail(e,EventTarget.value)} 
+          value={email}
           type='email'
           placeholder='Enter your email'
           aria-label='Email Address'
