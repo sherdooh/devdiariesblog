@@ -20,7 +20,9 @@ const Page = () => {
   const deleteBlog = async (mongoId) => {
     try {
       const response = await axios.delete('/api/blog', {
-        params: { id: mongoId }
+        params: { 
+          id: mongoId 
+        }
       });
       toast.success(response.data.msg);
       fetchBlogs();
