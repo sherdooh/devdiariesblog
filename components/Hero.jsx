@@ -24,7 +24,7 @@ const Hero = () => {
   
 
   return (
-    <div className='text-center h-[70vh] bg-cover bg-center'>
+    <div className='text-center h-[70vh] bg-cover bg-center' style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2018/02/17/14/15/template-3160023_1280.jpg')" }}>
       <Header />
       {/* Main Heading */}
       <h1 className='text-4xl sm:text-6xl font-extrabold text-[#33254f]'>

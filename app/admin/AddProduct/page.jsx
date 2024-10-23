@@ -79,7 +79,7 @@ const Page = () => {
           type="text"
           className="w-full sm:w-[500px] px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-300 focus:border-yellow-400 outline-none transition"
           placeholder="Type here"
-          maxLength={100}
+          maxLength={200}
           required
         />
       </div>
@@ -94,7 +94,7 @@ const Page = () => {
           value={data.description}
           className="w-full sm:w-[500px] px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-300 focus:border-yellow-400 outline-none transition"
           placeholder="Write content here..."
-          maxLength={200}
+          
           rows={8}
           required
         />

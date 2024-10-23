@@ -9,6 +9,7 @@ const BlogItem = ({ title, description, category, image, id }) => {
 
   return (
     <div className='max-w-[330px] sm:max-w-[300px] bg-white border border-black rounded-lg overflow-hidden hover:shadow-[-7px_7px_0px_#000] transition-shadow duration-300'>
+      
       <Link href={`/blogs/${id}`}>
         <Image src={imagePath} alt="" width={400} height={400} className='border-b border-black' />
       </Link>
@@ -20,8 +21,7 @@ const BlogItem = ({ title, description, category, image, id }) => {
           {title}
         </h5>
         {/* Blog Description */}
-        <p className='mb-3 text-sm text-gray-700'>
-          {description}
+        <p className='mb-3 text-sm tracking-tight text-gray-700' dangerouslySetInnerHTML={{__html:description.slice(0,120)}}>
         </p>
         {/* Read More */}
         <Link href={`/blogs/${id}`} className='flex items-center gap-1 text-black font-semibold hover:underline cursor-pointer'>
