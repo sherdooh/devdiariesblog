@@ -6,16 +6,18 @@ const LoadDB = async () => {
   await ConnectDB();
 };
 
+//Email GET Request
 export async function GET(request) {
   try {
     await LoadDB();
-    const emails = await EmailModel.find(); // Fetch emails from your database
+    const emails = await EmailModel.find(); 
     return NextResponse.json({ emails });
   } catch (error) {
     return NextResponse.json({ success: false }, { status: 500 });
   }
 }
 
+//Email POST Request
 export async function POST(request) {
   try {
     await LoadDB();

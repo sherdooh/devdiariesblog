@@ -8,7 +8,7 @@ const fs = require('fs');
 const LoadDB = async () => {
   await ConnectDB();
 };
-
+//Blogs GET Request
 export async function GET(request) {
   try {
     await LoadDB();
@@ -42,7 +42,7 @@ export async function POST(request) {
       description: formData.get('description'),
       category: formData.get('category'),
       author: formData.get('author'),
-      image: `/${imageName}`, // Ensure path starts with "/"
+      image: `/${imageName}`,
       authorImg: formData.get('authorImg'),
     };
 

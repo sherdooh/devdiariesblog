@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DevDiaries Blog
 
-## Getting Started
+## Description
+DevDiaries Blog is a full-stack application built using Next.js, MongoDB, and Tailwind CSS. This platform allows users to browse and read blog posts on various tech-related topics. An admin panel provides the ability to manage blog posts and email subscriptions, offering a seamless experience for both users and administrators.
 
-First, run the development server:
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Backend](#backend)
+- [Frontend](#frontend)
+- [Admin Panel](#admin-panel)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Overview
+1. Setup Next.js Project
+2. Create Header section
+3. Create Blog List for Home page
+4. Filter blog by Category
+5. Create Footer
+6. Create Blog Post page
+7. Start building Backend
+8. Setup MongoDB Database
+9. Create API
+10. Create Admin Dashboard
+11. Create Add Blog Page
+12. Display Blog List using API
+13. Create Blog List Page for Admin
+14. Create Delete Blog Feature
+15. Create Email Subscription Feature
+16. Create Email Subscription Page for Admin
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
+Follow these steps to set up the project locally:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/devdiariesblog.git
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
