@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useState } from 'react';
 import BlogItem from './BlogItem';
 import axios from 'axios';
@@ -6,18 +7,26 @@ import axios from 'axios';
 const BlogList = () => {
   const [menu, setMenu] = useState("All");
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true); // New loading state
 
   const fetchBlogs = async () => {
-    const response = await axios.get('/api/blog');
-    const standardizedBlogs = response.data.blogs.map(blog => {
-      const imagePath = blog.image.startsWith('/') ? blog.image : `/${blog.image}`;
-      console.log("Standardized Image Path:", imagePath); // Log the paths
-      return {
-        ...blog,
-        image: imagePath,
-      };
-    });
-    setBlogs(standardizedBlogs);
+    try {
+      setLoading(true); // Ensure loading state is set to true before fetching
+      const response = await axios.get('/api/blog');
+      const standardizedBlogs = response.data.blogs.map(blog => {
+        const imagePath = blog.image.startsWith('/') ? blog.image : `/${blog.image}`;
+        console.log("Standardized Image Path:", imagePath); // Log the paths
+        return {
+          ...blog,
+          image: imagePath,
+        };
+      });
+      setBlogs(standardizedBlogs);
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+    } finally {
+      setLoading(false); // Set loading to false once fetching is complete
+    }
   };
 
   useEffect(() => {
@@ -71,7 +80,9 @@ const BlogList = () => {
         </button>
       </div>
       <div className='flex flex-wrap justify-around gap-1 gap-y-10 mb-16 xl:mx-24'>
-        {blogs.length > 0 ? (
+        {loading ? (
+          <p className="text-3xl sm:text-4xl font-extrabold text-[#33254f] animate-pulse">Fetching blogs...</p>
+        ) : blogs.length > 0 ? (
           blogs
             .filter(item => menu === "All" || item.category === menu)
             .map(item => (
