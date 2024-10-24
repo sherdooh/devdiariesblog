@@ -40,3 +40,30 @@ Follow these steps to set up the project locally:
    ```bash
    git clone https://github.com/yourusername/devdiariesblog.git
 
+2. Navigate to the project directory
+
+   cd devdiariesblog
+
+3. Install dependencies
+
+   Install dependencies
+
+4. Setup environment variables
+
+   cp .env.example .
+
+5. Start the development Server
+
+   npm run dev
+
+6. Usage
+Navigate to the homepage to explore the latest blog posts.
+
+Filter posts by category using the menu.
+
+Click on any blog title to read more details.
+
+Subscribe to the newsletter using the email subscription form.
+
+   npm start
+   
