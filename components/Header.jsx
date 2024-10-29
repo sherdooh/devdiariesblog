@@ -20,7 +20,7 @@ const Header = () => {
     
     
     <div className="flex items-center gap-6 font-bold">
-      <Link href="##" className='text-lg text-[#33254f]'>
+      <Link href="/" className='text-lg text-[#33254f]'>
         About
       </Link>
       <button className="flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-solid border-black">

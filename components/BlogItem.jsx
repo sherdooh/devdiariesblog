@@ -5,28 +5,48 @@ import React from 'react';
 
 const BlogItem = ({ title, description, category, image, id }) => {
   // Ensure the image path starts with "/" if it's not an absolute URL
-  const imagePath = image.startsWith('') ? image : `/${image}`;
+  const imagePath = image.startsWith('/') ? image : `/${image}`;
 
   return (
-    <div className='max-w-[330px] sm:max-w-[300px] bg-white border border-black rounded-lg overflow-hidden hover:shadow-[-7px_7px_0px_#000] transition-shadow duration-300'>
-      
-      <Link href={`/blogs/${id}`}>
-        <Image src={imagePath} alt="" width={400} height={400} className='border-b border-black' />
+    <div className="group max-w-[340px] sm:max-w-[320px] bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+      {/* Image with Link */}
+      <Link href={`/blogs/${id}`} className="relative block overflow-hidden rounded-t-lg">
+        <Image
+          src={imagePath}
+          alt={title}
+          width={400}
+          height={250}
+          className="w-full h-[250px] object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
+        />
+        {/* Category Tag Overlay */}
+        <span className="absolute top-3 left-3 bg-black bg-opacity-75 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider shadow-md group-hover:bg-opacity-90 transition-all duration-300">
+          {category}
+        </span>
       </Link>
-      {/* Category Tag */}
-      <p className='ml-5 mt-5 px-2 inline-block bg-black text-white text-xs uppercase'>{category}</p>
-      <div className='p-5'>
+
+      {/* Content Section */}
+      <div className="p-6">
         {/* Blog Title */}
-        <h5 className='mb-2 text-lg font-bold tracking-tight text-gray-900'>
-          {title}
+        <h5 className="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-blue-600 hover:underline">
+          <Link href={`/blogs/${id}`}>{title}</Link>
         </h5>
+
         {/* Blog Description */}
-        <p className='mb-3 text-sm tracking-tight text-gray-700' dangerouslySetInnerHTML={{__html:description.slice(0,120)}}>
-        </p>
-        {/* Read More */}
-        <Link href={`/blogs/${id}`} className='flex items-center gap-1 text-black font-semibold hover:underline cursor-pointer'>
-          Read more
-          <Image src={assets.arrow} alt='arrow' width={12} />
+        <p
+          className=" text-gray-600 text-sm leading-relaxed mb-4 transition-opacity duration-300 group-hover:opacity-90"
+          dangerouslySetInnerHTML={{ __html: description.slice(0, 120) }}
+        ></p>
+
+        {/* Read More Link */}
+        <Link
+          href={`/blogs/${id}`}
+          className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-800 transition-all duration-200"
+        >
+          <span className="relative">
+            Read more
+            <span className="absolute inset-0 translate-x-1 translate-y-1 bg-blue-500 opacity-20 rounded-lg group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-200"></span>
+          </span>
+          <Image src={assets.arrow} alt="arrow icon" width={12} height={12} />
         </Link>
       </div>
     </div>

@@ -10,17 +10,14 @@ const updatePaths = async () => {
     const updateOperations = blogs.map(async (blog) => {
       let updatedPath = blog.image;
 
-      // If the path starts with "./", remove it
       if (updatedPath.startsWith('./')) {
         updatedPath = updatedPath.substring(2);
       }
       
-      // Ensure the path starts with a single "/"
       if (!updatedPath.startsWith('/')) {
         updatedPath = '/' + updatedPath;
       }
 
-      // If the path already starts with "/", remove "./" from beginning
       if (updatedPath.startsWith('/./')) {
         updatedPath = updatedPath.substring(2);
       }
