@@ -1,3 +1,5 @@
+import { assets } from '@/Assets/assets';
+import Image from 'next/image';
 import React from 'react';
 
 const SubTableItems = ({ email, mongoId, deleteEmail, date }) => {
@@ -8,7 +10,28 @@ const SubTableItems = ({ email, mongoId, deleteEmail, date }) => {
         {email ? email : "No Email"}
       </th>
       <td className='px-6 py-4 hidden sm:block'>{emailDate.toDateString()}</td>
-      <td className='px-6 py-4 cursor-pointer' onClick={() => deleteEmail(mongoId)}>X</td>
+      
+      {/* Delete Action */}
+      <td
+        onClick={() => deleteEmail(mongoId)}
+        className="px-6 py-4 text-red-500 cursor-pointer hover:text-red-700 transition-colors duration-200 text-center"
+        title="Delete Blog"
+      >
+
+        
+        <Image
+          src={assets.delete_icon_1}
+          alt="Delete Blog"
+          width={20} // Adjust the width as needed
+          height={20} // Adjust the height as needed
+          className="inline-block"
+        />
+      </td>
+
+
+
+
+      
     </tr>
   );
 }

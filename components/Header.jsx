@@ -23,10 +23,13 @@ const Header = () => {
       <Link href="/" className='text-lg text-[#33254f]'>
         About
       </Link>
+      <Link href={'/Footer'}>
       <button className="flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-solid border-black">
         Get Started
         <Image src={assets.arrow} alt="Arrow" />
       </button>
+      
+      </Link>
     </div>
   </div>
 </div>

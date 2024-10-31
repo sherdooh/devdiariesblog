@@ -22,6 +22,11 @@ import logo from './logo.png'
 import logo2 from './logo2.png'
 import  logo_dev_transparent from './logo_dev_transparent.png'
 import  logo_dev_light from './logo_dev_light.png'
+import delete_icon_1 from './delete_icon_1.png'
+import delete_icon_2 from './delete_icon_2.png'
+
+import facebook from './facebook.png'
+
 
 import arrow from './arrow.png'
 import logo_light from './logo_light.png'
@@ -43,8 +48,11 @@ export const assets = {
     logo_light,
     blog_icon,
     add_icon,
+    delete_icon_2,
+    delete_icon_1,
     email_icon,
-    upload_area
+    upload_area,
+    facebook
     }
 
     export const blog_data = [

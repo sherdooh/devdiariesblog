@@ -2,6 +2,8 @@
 
 
 import BlogList from "@/components/BlogList";
+import CTA from "@/components/CTA";
+import FeaturedPosts from "@/components/FeaturedPosts";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -17,7 +19,12 @@ export default function Home() {
     <ToastContainer theme="dark"/>
       <Hero />
 
+      <FeaturedPosts/>
+
+
       <BlogList />
+
+      <CTA/>
 
       <Footer />
 
