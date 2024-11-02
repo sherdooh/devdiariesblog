@@ -6,16 +6,16 @@ import React from 'react';
 const BlogItem = ({ title, description, category, image, id }) => {
   // Ensure the image path starts with "/" if it's not an absolute URL
   const imagePath = image.startsWith('/') ? image : `/${image}`;
-
   return (
     <div className="group max-w-[340px] sm:max-w-[320px] bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
       {/* Image with Link */}
-      <Link href={`/blogs/${id}`} className="relative block overflow-hidden rounded-t-lg">
+      <Link href={`/blogs/${id}`} className="relative block overflow-hidden rounded-t-lg" style={{ height: '250px' }}>
         <Image
           src={imagePath}
           alt={title}
-          width={400}
-          height={250}
+          fill
+          style={{ objectFit: 'cover' }}
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="w-full h-[250px] object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
         />
         {/* Category Tag Overlay */}
@@ -23,20 +23,17 @@ const BlogItem = ({ title, description, category, image, id }) => {
           {category}
         </span>
       </Link>
-
       {/* Content Section */}
       <div className="p-6">
         {/* Blog Title */}
         <h5 className="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-blue-600 hover:underline">
           <Link href={`/blogs/${id}`}>{title}</Link>
         </h5>
-
         {/* Blog Description */}
         <p
-          className=" text-gray-600 text-sm leading-relaxed mb-4 transition-opacity duration-300 group-hover:opacity-90"
+          className="text-gray-600 text-sm leading-relaxed mb-4 transition-opacity duration-300 group-hover:opacity-90"
           dangerouslySetInnerHTML={{ __html: description.slice(0, 120) }}
         ></p>
-
         {/* Read More Link */}
         <Link
           href={`/blogs/${id}`}

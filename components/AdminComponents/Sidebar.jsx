@@ -15,7 +15,7 @@ const Sidebar = () => {
         {/* <Image src={assets.logo_dev_transparent} width={120} alt='' /> */}
       </div>
 
-      <div className='w-full sm:w-80 py-6 px-6 border-r border-black'>
+      <div className='w-full sm:w-60 py-6 px-6 border-r border-black'>
         <div className='space-y-6'>
           {/* Add Blogs Link */}
           <Link href='/admin/AddProduct' className='flex items-center gap-3 px-4 py-3 border border-black rounded-md bg-white shadow-md transition-transform transform hover:scale-105 hover:bg-slate-50'>

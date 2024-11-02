@@ -28,7 +28,6 @@ const FeaturedPosts = () => {
         console.error('Error fetching posts:', error);
       }
     };
-
     fetchPosts();
   }, []);
 
@@ -50,8 +49,9 @@ const FeaturedPosts = () => {
                 <Image
                   src={posts[0].image}
                   alt={posts[0].title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-lg"
                 />
                 <div className="absolute inset-0 bg-black opacity-30"></div>
@@ -66,7 +66,6 @@ const FeaturedPosts = () => {
                 </div>
               </div>
             </Link>
-
             {/* Side Blog Posts */}
             <div className="grid grid-rows-2 gap-6">
               {posts.slice(1).map((post) => (
@@ -76,8 +75,9 @@ const FeaturedPosts = () => {
                       <Image
                         src={post.image}
                         alt={post.title}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="rounded-lg"
                       />
                       <div className="absolute inset-0 bg-black opacity-30"></div>
