@@ -4,12 +4,15 @@ import axios from 'axios';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Page = () => {
   const [image, setImage] = useState(null);
   const [data, setData] = useState({
     title: "",
     description: "",
+    category: "Programming",
+    author: "Shadrack Kip",
     category: "Programming",
     author: "Shadrack Kip",
     authorImg: "/author_img.png"

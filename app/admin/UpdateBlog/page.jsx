@@ -74,6 +74,7 @@ const UpdateBlog = () => {
         toast.error('Error updating blog');
       }
     } catch (error) {
+      console.error('Error response:', error.response || error.message);
       toast.error('An error occurred while updating the blog.');
     }
   };

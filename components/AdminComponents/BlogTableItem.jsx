@@ -6,6 +6,7 @@ const BlogTableItem = ({ authorImg, title, category, author, date, deleteBlog, m
   const BlogDate = new Date(date);
 
   return (
+    
     <tr className="bg-white border-b hover:bg-gray-100 transition duration-200">
       {/* Author*/}
       <th
@@ -45,8 +46,8 @@ const BlogTableItem = ({ authorImg, title, category, author, date, deleteBlog, m
         <Image
           src={assets.delete_icon_1}
           alt="Delete Blog"
-          width={20} 
-          height={20} 
+          width={20} // Adjust the width as needed
+          height={20} // Adjust the height as needed
           className="inline-block"
         />
       </td>

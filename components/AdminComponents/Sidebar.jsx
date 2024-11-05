@@ -14,7 +14,7 @@ const Sidebar = () => {
        
       </div>
 
-      <div className='w-full sm:w-80 py-6 px-6 border-r border-black'>
+      <div className='w-full sm:w-60 py-6 px-6 border-r border-black'>
         <div className='space-y-6'>
          
          

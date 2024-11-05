@@ -8,7 +8,7 @@ const Header = () => {
     <div className="py-10 px-6 md:px-16 lg:px-32">
   
   <div className="flex justify-between items-center">
-    
+    {/* Logo */}
     <Link href="/">
       <Image 
         src={assets.logo_dev_transparent} 
@@ -26,12 +26,18 @@ const Header = () => {
       <Link href={'/Footer'}>
       <button className="flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-solid border-black">
         Get Started
-        <Image src={assets.arrow} alt="Arrow" />
+        <Image 
+          src={assets.arrow} 
+          alt="Arrow" 
+          width={12} 
+          height="auto"
+          style={{ height: 'auto' }} 
+        />
       </button>
-      
-      </Link>
-    </div>
+    </Link>
   </div>
+</div>
+
 </div>
 
   );
