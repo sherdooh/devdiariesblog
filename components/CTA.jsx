@@ -58,7 +58,6 @@ const CTA = () => {
         </form>
       </div>
 
-      {/* Toast Notifications */}
       <ToastContainer theme="dark" position="top-right" autoClose={5000} />
     </div>
   );

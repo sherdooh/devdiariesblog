@@ -7,15 +7,15 @@ import axios from 'axios';
 const BlogList = () => {
   const [menu, setMenu] = useState("All");
   const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true); // New loading state
+  const [loading, setLoading] = useState(true); 
 
   const fetchBlogs = async () => {
     try {
-      setLoading(true); // Ensure loading state is set to true before fetching
+      setLoading(true); // loading state set to true before fetching
       const response = await axios.get('/api/blog');
       const standardizedBlogs = response.data.blogs.map(blog => {
-        const imagePath = blog.image.startsWith('/') ? blog.image : `/${blog.image}`;
-        console.log("Standardized Image Path:", imagePath); // Log the paths
+        const imagePath = blog.image.startsWith('/') ? blog.image : `/${blog.image}` ;
+        
         return {
           ...blog,
           image: imagePath,
@@ -25,7 +25,7 @@ const BlogList = () => {
     } catch (error) {
       console.error("Error fetching blogs:", error);
     } finally {
-      setLoading(false); // Set loading to false once fetching is complete
+      setLoading(false); // loading false once fetching is complete
     }
   };
 

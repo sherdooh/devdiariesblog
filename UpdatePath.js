@@ -22,7 +22,7 @@ const updatePaths = async () => {
         updatedPath = updatedPath.substring(2);
       }
 
-      // Log each operation for troubleshooting
+      
       console.log(`Updating path from: ${blog.image} to: ${updatedPath}`);
 
       blog.image = updatedPath;

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { assets } from '@/Assets/assets';
 
-// Utility function to strip HTML tags from a string
+// strip HTML tags
 const stripHtmlTags = (str) => {
   if (typeof str === 'string') {
     return str.replace(/<\/?[^>]+(>|$)/g, '');
@@ -50,8 +50,9 @@ const FeaturedPosts = () => {
                 <Image
                   src={posts[0].image}
                   alt={posts[0].title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: 'cover' }}
                   className="rounded-lg"
                 />
                 <div className="absolute inset-0 bg-black opacity-30"></div>
@@ -74,10 +75,12 @@ const FeaturedPosts = () => {
                   <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer h-[240px] w-full">
                     <div className="w-1/3 relative h-full">
                       <Image
-                        src={post.image}
+                        src={post.image} 
                         alt={post.title}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        priority={true}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{ objectFit: 'cover' }}
                         className="rounded-lg"
                       />
                       <div className="absolute inset-0 bg-black opacity-30"></div>
@@ -92,7 +95,7 @@ const FeaturedPosts = () => {
                       </p>
                       <div className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-800 transition-all duration-200">
                         Read more
-                        <Image src={assets.arrow} alt="arrow icon" width={12} height={12} />
+                        <Image src={assets.arrow} alt="arrow icon" width={12} height={12} style={{ width: 'auto', height: 'auto' }}/>
                       </div>
                     </div>
                   </div>

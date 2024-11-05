@@ -26,7 +26,7 @@ export async function GET(request) {
     return NextResponse.json({ success: false }, { status: 500 });
   }
 }
-
+//POST  Request
 export async function POST(request) {
   try {
     await LoadDB();
@@ -63,7 +63,7 @@ export async function DELETE(request) {
   return NextResponse.json({ msg: "Blog Deleted!!" });
 }
 
-// PUT Endpoint for Blog Update
+// PUT Endpoint Blog Update
 export async function PUT(request) {
   const { id } = request.nextUrl.pathname.split('/').slice(-1)[0];  // Extract ID from URL path
   await LoadDB();

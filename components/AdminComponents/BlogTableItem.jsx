@@ -2,12 +2,12 @@ import { assets } from '@/Assets/assets';
 import Image from 'next/image';
 import React from 'react';
 
-const BlogTableItem = ({ authorImg, title, author, date, deleteBlog, mongoId }) => {
+const BlogTableItem = ({ authorImg, title, category, author, date, deleteBlog, mongoId }) => {
   const BlogDate = new Date(date);
 
   return (
     <tr className="bg-white border-b hover:bg-gray-100 transition duration-200">
-      {/* Author Section */}
+      {/* Author*/}
       <th
         scope="row"
         className="flex items-center gap-4 px-6 py-4 font-medium text-gray-800 whitespace-nowrap hidden sm:table-cell"
@@ -27,6 +27,10 @@ const BlogTableItem = ({ authorImg, title, author, date, deleteBlog, mongoId }) 
         {title || "No title"}
       </td>
 
+      <td className="px-6 py-4 text-gray-700 font-semibold truncate max-w-xs">
+        {category}
+      </td>
+
       {/* Date */}
       <td className="px-6 py-4 text-gray-500 text-sm">
         {BlogDate.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' })}
@@ -41,8 +45,8 @@ const BlogTableItem = ({ authorImg, title, author, date, deleteBlog, mongoId }) 
         <Image
           src={assets.delete_icon_1}
           alt="Delete Blog"
-          width={20} // Adjust the width as needed
-          height={20} // Adjust the height as needed
+          width={20} 
+          height={20} 
           className="inline-block"
         />
       </td>

@@ -22,8 +22,8 @@ const SubTableItems = ({ email, mongoId, deleteEmail, date }) => {
         <Image
           src={assets.delete_icon_1}
           alt="Delete Blog"
-          width={20} // Adjust the width as needed
-          height={20} // Adjust the height as needed
+          width={20} 
+          height={20} 
           className="inline-block"
         />
       </td>

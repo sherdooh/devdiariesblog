@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           {/* Logo and Name */}
           <Link href={'/'} className="flex items-center mb-4 sm:mb-0 space-x-3">
-            <Image src={assets.logo_dev_light} alt="Logo" width={40} height={40} />
+            <Image src={assets.logo_dev_light} alt="Logo" width={40} height={40} style={{ width: 'auto', height: 'auto'}} />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">DevDiaries</span>
           </Link>
 
@@ -32,10 +32,10 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Divider */}
+        
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 
-        {/* Copyright and Social Media Icons */}
+        
         <div className="flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500 dark:text-gray-400">
           <span>© 2023 <a href="/" className="hover:underline">DevDiaries™</a>. All Rights Reserved.</span>
           <div className="flex gap-4 mt-4 sm:mt-0">

@@ -6,9 +6,9 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <div className="py-10 px-6 md:px-16 lg:px-32">
-  {/* Logo and Navigation Section */}
+  
   <div className="flex justify-between items-center">
-    {/* Logo */}
+    
     <Link href="/">
       <Image 
         src={assets.logo_dev_transparent} 

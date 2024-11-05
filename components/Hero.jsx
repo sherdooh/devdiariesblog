@@ -14,7 +14,7 @@ const Hero = () => {
       <h1 className='text-4xl sm:text-6xl font-extrabold text-[#33254f]'>
         Explore Our Latest Blogs
       </h1>
-      {/* Paragraph */}
+      
       <p className='mt-6 max-w-[740px] mx-auto text-base sm:text-lg text-[#33254f] leading-relaxed font-semibold'>
         Stay up-to-date with the latest trends, tips, and insights from industry experts. Read articles on web development, design, and much more.
       </p>
