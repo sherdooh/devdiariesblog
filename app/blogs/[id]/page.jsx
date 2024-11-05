@@ -87,7 +87,7 @@ const Page = ({ params }) => {
           <p className="text-lg font-semibold text-gray-700 mb-4">Share this article on social media</p>
           <div className="flex justify-center gap-6">
             <Image
-              src={assets.facebook_icon}
+              src={assets.facebook}
               width={40}
               height={40}
               alt="Facebook"
@@ -95,18 +95,18 @@ const Page = ({ params }) => {
               style={{ width: 'auto', height: 'auto', objectFit: 'cover' }}
             />
             <Image
-              src={assets.twitter_icon}
+              src={assets.x}
               width={40}
               height={40}
-              alt="Twitter"
+              alt="TwitterX"
               className="hover:scale-110 transition-transform duration-200"
               style={{ width: 'auto', height: 'auto', objectFit: 'cover' }}
             />
             <Image
-              src={assets.googleplus_icon}
+              src={assets.linkedin}
               width={40}
               height={40}
-              alt="Google Plus"
+              alt="LinkedIn"
               className="hover:scale-110 transition-transform duration-200"
               style={{ width: 'auto', height: 'auto', objectFit: 'cover' }}
             />
