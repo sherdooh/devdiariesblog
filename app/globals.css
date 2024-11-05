@@ -10,7 +10,7 @@
     scrollbar-width: none;
 }
 
-body, p-form {
+body, p-form{
   background: linear-gradient(to bottom, #e0f7fa, #ffffff);
   background-size: cover;
   background-position: center;

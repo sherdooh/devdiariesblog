@@ -7,7 +7,7 @@ const BlogItem = ({ title, description, category, image, id }) => {
   // image path starts with "/" if it's not an absolute URL
   const imagePath = image.startsWith('/') ? image : `/${image}`;
   return (
-    <div className="group max-w-[340px] sm:max-w-[320px] bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+    <div className="group max-w-[340px] sm:max-w-[320px] border border-gray-200 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
       {/* Image with Link */}
       <Link href={`/blogs/${id}`} className="relative block overflow-hidden rounded-t-lg">
         <Image

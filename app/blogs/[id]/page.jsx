@@ -65,7 +65,7 @@ const Page = ({ params }) => {
 
       {/* Blog Content description*/}
 
-      <div className="mx-auto max-w-[80%] lg:max-w-[800px] mb-12 bg-white p-6 rounded-lg shadow-lg text-center">
+      <div className="mx-auto max-w-[80%] lg:max-w-[800px] mb-12 p-6 rounded-lg shadow-lg text-center">
         {imagePath && (
           <div className="flex justify-center">
             <Image
@@ -73,7 +73,7 @@ const Page = ({ params }) => {
               src={imagePath}
               width={800}
               height={200}
-
+              style={{ width: 'auto', height: 'auto', objectFit: 'cover' }}
               priority={true}
               alt=""
             />
