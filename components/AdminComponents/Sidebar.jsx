@@ -30,16 +30,22 @@ const Sidebar = () => {
             <p className='font-medium'>Blog Lists</p>
           </Link>
 
-          <Link href='/admin/UpdateBlog' className='flex items-center gap-3 px-4 py-3 border border-black rounded-md bg-white shadow-md transition-transform transform hover:scale-105 hover:bg-slate-50'>
+          {/* <Link href='/admin/UpdateBlog' className='flex items-center gap-3 px-4 py-3 border border-black rounded-md bg-white shadow-md transition-transform transform hover:scale-105 hover:bg-slate-50'>
             <Image src={assets.blog_icon} alt='Blog List' width={28} />
             <p className='font-medium'>Update Blog</p>
-          </Link>
+          </Link> */}
 
           
 
           <Link href='/admin/Subscription' className='flex items-center gap-3 px-4 py-3 border border-black rounded-md bg-white shadow-md transition-transform transform hover:scale-105 hover:bg-slate-50'>
             <Image src={assets.email_icon} alt='Subscriptions' width={28} />
             <p className='font-medium'>Subscriptions</p>
+          </Link>
+
+
+          <Link href='/admin/Contacts' className='flex items-center gap-3 px-4 py-3 border border-black rounded-md bg-white shadow-md transition-transform transform hover:scale-105 hover:bg-slate-50'>
+            <Image src={assets.blog_icon} alt='contacts' width={28} />
+            <p className='font-medium'>Messages</p>
           </Link>
         </div>
       </div>
