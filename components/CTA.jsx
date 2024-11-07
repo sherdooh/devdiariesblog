@@ -26,7 +26,7 @@ const CTA = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg dark:bg-gray-800 py-12">
+    <div id= "cta-section" className="bg-white rounded-lg dark:bg-gray-800 py-12">
       <div className="relative px-4 py-8 overflow-hidden sm:px-6 sm:py-10 lg:p-12 xl:p-16 max-w-3xl mx-auto text-center rounded-lg shadow-lg">
         {/* Title and Description */}
         <h2 className="text-2xl font-semibold text-black dark:text-white sm:text-3xl">
