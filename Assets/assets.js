@@ -17,6 +17,8 @@ import x from './x.png'
 import linkedin from './linkedin.png'
 import whatsapp from './whatsapp.png'
 import github from './github.png'
+import about from './about.jpg'
+import blob from './blob.svg'
 
 export const assets = {
     facebook_icon,
@@ -27,7 +29,9 @@ export const assets = {
     logo_dev_transparent,
     arrow,
     gmail,
+    about,
     github,
+    blob,
     x,
     linkedin,
     whatsapp,

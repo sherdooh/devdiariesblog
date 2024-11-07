@@ -18,16 +18,16 @@ const Footer = () => {
           {/* Navigation Links */}
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>
-              <a href="#" className="hover:underline mr-4 md:mr-6">About</a>
+              <Link href="/About" className="hover:underline mr-4 md:mr-6">About</Link>
             </li>
             <li>
-              <a href="#" className="hover:underline mr-4 md:mr-6">Privacy Policy</a>
+              <Link href="#" className="hover:underline mr-4 md:mr-6">Privacy Policy</Link>
             </li>
             <li>
-              <a href="#" className="hover:underline mr-4 md:mr-6">Licensing</a>
+              <Link href="#" className="hover:underline mr-4 md:mr-6">Licensing</Link>
             </li>
             <li>
-              <a href="#" className="hover:underline">Contact</a>
+              <Link href="/Contact" className="hover:underline">Contact</Link>
             </li>
           </ul>
         </div>
@@ -39,26 +39,26 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500 dark:text-gray-400">
           <span>© 2023 <a href="/" className="hover:underline">DevDiaries™</a>. All Rights Reserved.</span>
           <div className="flex gap-4 mt-4 sm:mt-0">
-            <a href="https://wa.me/0700581448" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: +1234567890" class="hover:scale-110 transition-transform duration-200">
+            <a href="https://wa.me/0700581448" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: +1234567890" className="hover:scale-110 transition-transform duration-200">
               <Image src={assets.whatsapp} alt="WhatsApp" width="40" height="40" />
             </a>
 
-            <a href="https://www.linkedin.com/in/shadrack-kiplangat-4282b9109/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn: yourprofile" class="hover:scale-110 transition-transform duration-200">
+            <a href="https://www.linkedin.com/in/shadrack-kiplangat-4282b9109/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn: yourprofile" className="hover:scale-110 transition-transform duration-200">
               <Image src={assets.linkedin} alt="LinkedIn" width="40" height="40" />
             </a>
 
 
-            <a href="mailto:sherkiplah@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Gmail: sherkiplah@gmail.com" class="hover:scale-110 transition-transform duration-200">
+            <a href="mailto:sherkiplah@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Gmail: sherkiplah@gmail.com" className="hover:scale-110 transition-transform duration-200">
               <Image src={assets.gmail} alt="Gmail" width="40" height="40" />
             </a>
 
 
-            <a href="https://www.facebook.com/cherdrerk.kiplangat" target="_blank" rel="noopener noreferrer" aria-label="Facebook: yourusername" class="hover:scale-110 transition-transform duration-200">
+            <a href="https://www.facebook.com/cherdrerk.kiplangat" target="_blank" rel="noopener noreferrer" aria-label="Facebook: yourusername" className="hover:scale-110 transition-transform duration-200">
               <Image src={assets.facebook} alt="Facebook" width="40" height="40" />
             </a>
 
 
-            <a href="https://github.com/sherdooh" target="_blank" rel="noopener noreferrer" aria-label="Gmail: sherkiplah@gmail.com" class="hover:scale-110 transition-transform duration-200">
+            <a href="https://github.com/sherdooh" target="_blank" rel="noopener noreferrer" aria-label="Gmail: sherkiplah@gmail.com" className="hover:scale-110 transition-transform duration-200">
               <Image src={assets.github} alt="Github" width="40" height="40" />
             </a>
 

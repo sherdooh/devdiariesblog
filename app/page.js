@@ -23,8 +23,10 @@ export default function Home() {
 
 
       <BlogList />
+     
 
       <CTA/>
+      
 
       <Footer />
 
