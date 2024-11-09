@@ -77,7 +77,7 @@ const About = () => {
 
                             {/* Socials*/}
                             <div className="flex gap-6 mt-8 justify-center md:justify-start">
-                                <a href="https://wa.me/0700581448" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:scale-110 transition-transform duration-200">
+                                <a href="https://wa.me/+254700581448" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:scale-110 transition-transform duration-200">
                                     <Image src={assets.whatsapp} alt="WhatsApp" width={40} height={40} />
                                 </a>
                                 <a href="https://www.linkedin.com/in/shadrack-kiplangat-4282b9109/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:scale-110 transition-transform duration-200">

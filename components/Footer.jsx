@@ -10,7 +10,7 @@ const Footer = () => {
 
         <div className="sm:flex sm:items-center sm:justify-between">
           
-          
+
           <Link href={'/'} className="flex items-center mb-4 sm:mb-0 space-x-3">
             <Image src={assets.logo_dev_light} alt="Logo" width={40} height={40} style={{ width: 'auto', height: 'auto' }} />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">DevDiaries</span>
@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500 dark:text-gray-400">
           <span>© 2023 <a href="/" className="hover:underline">DevDiaries™</a>. All Rights Reserved.</span>
           <div className="flex gap-4 mt-4 sm:mt-0">
-            <a href="https://wa.me/0700581448" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: +1234567890" className="hover:scale-110 transition-transform duration-200">
+            <a href="https://wa.me/+254700581448" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: +1234567890" className="hover:scale-110 transition-transform duration-200">
               <Image src={assets.whatsapp} alt="WhatsApp" width="40" height="40" />
             </a>
 

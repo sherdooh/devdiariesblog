@@ -13,7 +13,7 @@
 **DevDiaries Blog** is a responsive, full-stack blogging platform designed for easy content creation and management. Built using **Next.js**, **React**, **MongoDB**, **Firebase**, and **Tailwind CSS**, it offers a dynamic user experience and a secure admin dashboard with Firebase authentication for authorized access.
 
 <p align="center">
-  <img src="https://i.ibb.co/W2DD0sw/blog.png" alt="Homepage Screenshot" width="800" />
+  <img src="https://i.ibb.co/BwGZrBS/Screenshot-2024-11-09-230117.png" alt="Homepage Screenshot" width="800" />
 </p>
 
 - **[Live Demo](https://devdiariesblog.vercel.app/)**: Explore the live version of DevDiaries Blog!
