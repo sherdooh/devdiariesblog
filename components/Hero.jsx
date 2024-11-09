@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Hero = () => {
   return (
-    <div className="text-center mb-20">
+    <div className="text-center mb-2">
       <Header />
 
  
