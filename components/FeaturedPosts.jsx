@@ -65,7 +65,7 @@ const FeaturedPosts = () => {
                 </div>
               </div>
             </Link>
-            {/* Side Blog Posts */}
+       
             <div className="grid grid-rows-2 gap-6">
               {posts.slice(1).map((post) => (
                 <Link href={`/blogs/${post._id}`} key={post._id} passHref>

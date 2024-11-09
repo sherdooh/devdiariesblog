@@ -28,7 +28,8 @@ const CTA = () => {
   return (
     <div id= "cta-section" className="bg-white rounded-lg dark:bg-gray-800 py-12">
       <div className="relative px-4 py-8 overflow-hidden sm:px-6 sm:py-10 lg:p-12 xl:p-16 max-w-3xl mx-auto text-center rounded-lg shadow-lg">
-        {/* Title and Description */}
+       
+
         <h2 className="text-2xl font-semibold text-black dark:text-white sm:text-3xl">
           Stay Updated with the Latest in Tech
         </h2>
@@ -36,7 +37,8 @@ const CTA = () => {
           Subscribe to our newsletter to stay updated with the latest tech news, trends, and tutorials. Get insights directly to your inbox.
         </p>
 
-        {/* Subscribe Form */}
+  
+  
         <form onSubmit={onSubmitHandler} className="mt-6 flex flex-col sm:flex-row justify-center w-full sm:w-3/4 lg:w-2/3 mx-auto space-y-3 sm:space-y-0 sm:space-x-3">
           <div className="flex-1">
             <input

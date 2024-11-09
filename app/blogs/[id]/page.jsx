@@ -42,13 +42,13 @@ const Page = ({ params }) => {
       <Header />
       <div className="text-center mt-16 px-6 md:px-0">
 
-        {/*Title*/}
+   
         
         <h1 className="text-3xl md:text-5xl font-extrabold max-w-[800px] mx-auto tracking-tight text-gray-900 mb-4 md:mb-6 leading-tight">
           {data.title}
         </h1>
 
-        {/*Author*/}
+        
         <div className="flex flex-col items-center mb-12">
           <Image
             className="rounded-full border-4 border-gray-200 shadow-lg"
@@ -82,7 +82,7 @@ const Page = ({ params }) => {
 
         <div className="text-left blog-content prose max-w-none text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: data.description }}></div>
 
-        {/* Social Media*/}
+        {/* Socials*/}
         <div className="my-12 text-center">
           <p className="text-lg font-semibold text-gray-700 mb-4">Share this article on social media</p>
           <div className="flex justify-center gap-6">

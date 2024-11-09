@@ -10,9 +10,9 @@ const Page = () => {
     const fetchContacts = async () => {
         try {
             const response = await axios.get('/api/contact');
-            if (response.data.success) { // Check for `success` key
-                console.log("Fetched Contacts:", response.data.contacts); // Log response
-                setContacts(response.data.contacts || []); // Ensure contacts is an array
+            if (response.data.success) { 
+                console.log("Fetched Contacts:", response.data.contacts); 
+                setContacts(response.data.contacts || []); 
             } else {
                 console.error("Failed to fetch contacts:", response.data.error);
                 toast.error("Failed to fetch contact messages");
@@ -41,7 +41,7 @@ const Page = () => {
     }, []);
 
     useEffect(() => {
-        console.log("Current Contacts State:", contacts); // Log state
+        console.log("Current Contacts State:", contacts); 
     }, [contacts]);
 
     return (

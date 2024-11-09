@@ -21,12 +21,14 @@ const Header = () => {
 
         {/* Navigation Links */}
         <nav className="flex items-center gap-8 font-bold text-gray-800">
-          <Link href="/About" target="_blank" className="hover:text-blue-600 transition-colors duration-200">
+          <Link href="/About" target="_blank" className="hover:text-blue-600 transition-colors duration-200 ">
             About
           </Link>
-          <Link href="#cta-section" className="hover:text-blue-600 transition-colors duration-200">
-            Get Started
+
+          <Link href="/Contact" target="_blank" className="hover:text-blue-600 transition-colors duration-200 ">
+            Contact Us
           </Link>
+
           <Link href="/login">
             <button className="flex items-center gap-2 font-medium py-1 px-4 sm:py-3 sm:px-6 border border-black rounded-md hover:bg-gray-100 transition duration-200">
               Admin Login

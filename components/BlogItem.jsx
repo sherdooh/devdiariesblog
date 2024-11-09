@@ -8,7 +8,8 @@ const BlogItem = ({ title, description, category, image, id }) => {
   const imagePath = image.startsWith('/') ? image : `/${image}`;
   return (
     <div className="group max-w-[340px] sm:max-w-[320px] border border-gray-200 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-      {/* Image with Link */}
+
+
       <Link href={`/blogs/${id}`} className="relative block overflow-hidden rounded-t-lg">
         <Image
           src={imagePath}
@@ -17,23 +18,28 @@ const BlogItem = ({ title, description, category, image, id }) => {
           height={250}
           className="w-full h-[250px] object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
         />
-        {/* Category Tag Overlay */}
+   
+
         <span className="absolute top-3 left-3 bg-black bg-opacity-75 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider shadow-md group-hover:bg-opacity-90 transition-all duration-300">
           {category}
         </span>
       </Link>
-      {/* Content Section */}
+
+
       <div className="p-6">
-        {/* Blog Title */}
+       
+
         <h5 className="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-blue-600 hover:underline">
           <Link href={`/blogs/${id}`} aria-label={`Read more about ${title}`}>{title}</Link>
         </h5>
-        {/* Blog Description */}
+      
+
         <p
           className="text-gray-600 text-sm leading-relaxed mb-4 transition-opacity duration-300 group-hover:opacity-90"
           dangerouslySetInnerHTML={{ __html: description.slice(0, 120) }}
         ></p>
-        {/* Read More Link */}
+       
+
         <Link
           href={`/blogs/${id}`}
           aria-label={`Read more about ${title}`}

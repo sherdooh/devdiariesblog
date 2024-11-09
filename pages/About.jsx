@@ -5,31 +5,66 @@ import { assets } from '@/Assets/assets';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import Contact from './Contact';
+import '@/app/globals.css';
 
 const About = () => {
     return (
         <>
             <Header />
 
+            
             <section className="pt-10 pb-20 sm:pt-16 2xl:pt-20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                    
+                    <div className="text-center space-y-4 mb-16">
+                        <h2 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl lg:text-5xl">
+                            About
+                        </h2>
+                        <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                            DevDiaries Blog is a modern, fully-featured platform designed for developers, tech enthusiasts, and content creators. Built with Next.js, MongoDB, and Tailwind CSS, it offers a seamless experience for both readers and admins, making content management easy and engaging.
+                        </p>
+                        <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                            Whether you are sharing insights, logging projects, or growing an audience, DevDiaries Blog empowers you to publish, manage, and scale your content effortlessly.
+                        </p>
+                    </div>
 
-                    {/* About Section */}
-                    <div className="grid items-center grid-cols-1 md:grid-cols-2 gap-12">
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
+                        <div className="text-center space-y-4">
+                            <Image src={assets.user1} alt="Feature Icon 1" width={60} height={60} className="mx-auto"/>
+                            <h3 className="text-xl font-semibold text-gray-800">Smooth User Experience</h3>
+                            <p className="text-gray-700">Optimized for desktop and mobile, ensuring seamless content engagement across devices.</p>
+                        </div>
+                        <div className="text-center space-y-4">
+                            <Image src={assets.cms1} alt="Feature Icon 2" width={60} height={60} className="mx-auto"/>
+                            <h3 className="text-xl font-semibold text-gray-800">Powerful Content Management</h3>
+                            <p className="text-gray-700">Admin dashboard allows easy handling of posts and subscribers, giving admins full control.</p>
+                        </div>
+                        <div className="text-center space-y-4">
+                            <Image src={assets.features2} alt="Feature Icon 3" width={60} height={60} className="mx-auto"/>
+                            <h3 className="text-xl font-semibold text-gray-800">Flexible Features</h3>
+                            <p className="text-gray-700">From blog post pages to email subscriptions and RESTful APIs—DevDiaries covers all bases.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                        {/* Text Section */}
-                        <div className="space-y-6">
-                            <h2 className="text-4xl font-bold leading-tight text-black sm:text-5xl lg:text-5xl">
-                                Hi, I&apos;m Shadrack Kiplangat
-                            </h2>
+            {/* Team Section */}
+            <section className="pt-20 pb-20">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                    <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Meet the Team</h3>
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-12">
 
-                            <p className="max-w-lg mt-4 text-lg leading-relaxed text-gray-700">
-                                I am a web developer passionate about building high-performance applications that prioritize user experience. With proficiency in technologies like JavaScript, React, and Node.js, I create solutions that not only solve problems but also deliver exceptional results.
+                        
+                        <div className="space-y-6 text-center md:text-left max-w-lg">
+                            <h4 className="text-2xl font-semibold text-gray-800">Hi, I am Shadrack Kiplangat</h4>
+                            <p className="text-lg text-gray-700">
+                                I am a web developer passionate about building high-performance applications that prioritize user experience. Proficient in most dev technologies, I create solutions that solve problems and deliver exceptional results.
                             </p>
-                            <p className="max-w-lg text-lg text-gray-700">
-                                My work is driven by a commitment to quality and efficiency, and I’m always ready to take on new challenges that allow me to grow and innovate. When I’m not coding, you’ll find me exploring new technologies, contributing to open-source projects, or sharing insights with the developer community.
+                            <p className="text-lg text-gray-700">
+                                Driven by quality and efficiency, I constantly explore new technologies and contribute to open-source projects. Outside coding, I love engaging with the developer community.
                             </p>
-                            <p className="mt-6">
+                            <div className="mt-6">
                                 <a
                                     href="https://my-portfolio-website-two-nu.vercel.app/"
                                     target="_blank"
@@ -38,10 +73,10 @@ const About = () => {
                                 >
                                     Visit My Portfolio
                                 </a>
-                            </p>
+                            </div>
 
-                            {/* Social Links Section */}
-                            <div className="flex gap-6 mt-8">
+                            {/* Socials*/}
+                            <div className="flex gap-6 mt-8 justify-center md:justify-start">
                                 <a href="https://wa.me/0700581448" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:scale-110 transition-transform duration-200">
                                     <Image src={assets.whatsapp} alt="WhatsApp" width={40} height={40} />
                                 </a>
@@ -60,37 +95,24 @@ const About = () => {
                             </div>
                         </div>
 
-                        {/* Image Section */}
-                        <div className="relative flex justify-center md:justify-end">
-                            <div className="relative w-full max-w-lg">
-                                <Image
-                                    src={assets.blob}
-                                    alt="Decorative shape"
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="absolute inset-x-0 bottom-0 transform translate-y-1/4 opacity-80"
-                                    aria-hidden="true"
-                                />
+                        
+                        <div className="relative flex justify-center md:justify-end w-full max-w-sm">
+                            <div className="relative w-full max-w-sm md:max-w-md">
+                                <div className="absolute inset-x-0 bottom-0 bg-indigo-600 rounded-full transform translate-y-12 h-80 w-80 opacity-50" aria-hidden="true"></div>
                                 <Image
                                     src={assets.about}
                                     alt="Shadrack Kiplangat"
-                                    width={500}
-                                    height={500}
-                                    className="relative w-full rounded-full"
+                                    width={400}
+                                    height={400}
+                                    className="relative w-full rounded-full border-4 border-white shadow-lg"
                                 />
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <Contact />
-
             </section>
-
-            {/* Call-to-Action Section */}
+            
             <CTA />
-
-            {/* Footer */}
             <Footer />
         </>
     );

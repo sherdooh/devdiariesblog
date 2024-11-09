@@ -19,6 +19,9 @@ import whatsapp from './whatsapp.png'
 import github from './github.png'
 import about from './about.jpg'
 import blob from './blob.svg'
+import cms1 from './cms1.png'
+import features2 from './features2.png'
+import user1 from './user1.png'
 
 export const assets = {
     facebook_icon,
@@ -32,6 +35,9 @@ export const assets = {
     about,
     github,
     blob,
+    cms1,
+    features2,
+    user1,
     x,
     linkedin,
     whatsapp,

@@ -10,8 +10,8 @@ const Page = () => {
   const fetchBlogs = async () => {
     try {
       const response = await axios.get('/api/blog');
-      console.log("Fetched Blogs:", response.data.blogs); // Log response data
-      setBlogs(response.data.blogs || []); // Ensure blogs is an array
+      console.log("Fetched Blogs:", response.data.blogs); 
+      setBlogs(response.data.blogs || []);
     } catch (error) {
       toast.error("Failed to fetch blogs");
     }
